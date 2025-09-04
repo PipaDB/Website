@@ -1,14 +1,193 @@
 {
+  "metadata": {
+    "db_name": "PipaDB",
+    "device": "Xiaomi Pad 6 (xiaomi-pipa)",
+    "description": "Game compatibility database for Steam games on Xiaomi Pad 6 using Box64",
+    "last_updated": "2025-08-22",
+    "installation_guide": "# Installing Steam with Box64 on ArchLinux ARM\n\n**WARNING: NOT RESPONSIBLE FOR ANY DAMAGE**\n\n## Prerequisites\n- ArchLinux ARM or compatible distro (postmarketOS will not work due to musl instead of glibc)\n- GNOME desktop environment (may work with others)\n\n## Installation Steps\n\n### 1. Install Box64\n```\nsudo pacman -S box64\n```\n\n### 2. Download Steam\nDownload steam.deb from the Steam website\n\n### 3. Install required tools\n```\nsudo pacman -S binutils tar\n```\n\n### 4. Extract Steam package\n```\ncd ~/Downloads\nar x steam.deb\ntar -xvf data.tar.xz\n```\n\n### 5. Install Steam files\n```\nsudo cp -r ./usr/* /usr/\nsudo cp -r ./etc/* /etc/\nsudo cp -r ./lib/* /lib/\n```\n\n### 6. Reboot system\n\n### 7. Launch Steam\n```\nSTEAMOS=1 STEAM_RUNTIME=1 DBUS_FATAL_WARNINGS=0 steam\n```\n\n### 8. Optional performance flag for some games\n```\nSTEAMOS=1 STEAM_RUNTIME=1 DBUS_FATAL_WARNINGS=0 LIBGL_ALWAYS_SOFTWARE=1 steam\n```"
+  },
   "games": [
     {
-      "title": "CowDung Eater",
-      "id": "cow-dung-eater",
+      "title": "UNDERTALE",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Slime Rancher",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Buckshot Roulette",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "A Dance of Fire and Ice",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration. Game is quite laggy during gameplay.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Baldi's Basics Classic Remastered",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Prism Launcher (Minecraft)",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux. Needs to be downloaded from Flathub, not available on Steam.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Works natively on Linux without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Five Nights at Freddy's 4",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Not native but works completely out of the box without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Geometry Dash",
+      "rating": "platinum",
+      "tester": "shylilySoCute",
+      "notes": "Not native but works completely out of the box without any configuration.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Terraria",
       "rating": "gold",
-      "tester": "SumRandomIndian",
-      "notes": "cowdung tasty sur.",
-      "image_url": "https://svastyaorganicfarms.com/cdn/shop/files/organic-desi-kangeyam-cow-dung-cake-570899.jpg?v=1737547457&width=900",
-      "screenshots": [],
-      "last_tested": "yes most definitly tested."
+      "tester": "shylilySoCute",
+      "notes": "Requires configuration:\n\n1. Go to game Properties in Steam\n2. Click on Compatibility\n3. Enable compatibility mode\n4. Select 'Legacy Runtime' instead of 'Steam Linux Runtime 1.0 (scout)'\n5. Launch the game",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Hollow Knight",
+      "rating": "gold",
+      "tester": "shylilySoCute",
+      "notes": "Works better with additional launch flag:\n\n1. Launch Steam with the command:\n   `STEAMOS=1 STEAM_RUNTIME=1 DBUS_FATAL_WARNINGS=0 LIBGL_ALWAYS_SOFTWARE=1 steam`\n2. Then launch the game normally",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "DDNet",
+      "rating": "gold",
+      "tester": "shylilySoCute",
+      "notes": "Requires configuration:\n\n1. Go to game Properties in Steam\n2. Click on Compatibility\n3. Enable compatibility mode\n4. Select 'Proton 10.0-2 (Beta)'\n5. When launching, select 'Play with OpenGL (if game doesn't start)'",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "R.E.P.O.",
+      "rating": "gold",
+      "tester": "shylilySoCute",
+      "notes": "Requires configuration:\n\n1. Launch Steam with:\n   `STEAMOS=1 STEAM_RUNTIME=1 DBUS_FATAL_WARNINGS=0 LIBGL_ALWAYS_SOFTWARE=1 steam`\n2. Go to game Properties\n3. Set launch options to: `-force-gfx-direct`\n4. Enable compatibility mode\n5. Select 'Proton 9.0-4'\n6. Launch the game",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "FNAF World",
+      "rating": "gold",
+      "tester": "shylilySoCute",
+      "notes": "Requires configuration:\n\n1. Go to game Properties\n2. Set launch options to: `PROTON_NO_ESYNC=1 PROTON_USE_WINED3D=1 %command% -force-opengl -windowed`\n3. Enable compatibility mode\n4. Select 'Proton 10.0-2 (Beta)'\n5. Launch the game",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Counter Strike Source",
+      "rating": "gold",
+      "tester": "rmux",
+      "notes": "Game cracked. Custom resolution works fine. Highest settings.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Bendy and the Dark Revival",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "BLOCKPOST LEGACY",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Boris and the Dark Survival",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Doki Doki Literature Club",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Five Nights at Freddy's 1-3",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Games do not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Five Nights at Freddy's 5-7",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Games do not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "The Forest",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "OBS Studio",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Application does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Your Mother",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Application does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Phasmophobia",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
+    },
+    {
+      "title": "Counter Strike 2",
+      "rating": "borked",
+      "tester": "shylilySoCute",
+      "notes": "Game does not work on Xiaomi Pad 6 with Box64.",
+      "last_tested": "2025-08-22"
     }
   ]
 }
