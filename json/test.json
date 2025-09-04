@@ -1,0 +1,14 @@
+{
+  "games": [
+    {
+      "title": "CowDung Eater",
+      "id": "cow-dung-eater",
+      "rating": "gold",
+      "tester": "SumRandomIndian",
+      "notes": "cowdung tasty sur.",
+      "image_url": "https://svastyaorganicfarms.com/cdn/shop/files/organic-desi-kangeyam-cow-dung-cake-570899.jpg?v=1737547457&width=900",
+      "screenshots": [],
+      "last_tested": "yes most definitly tested."
+    }
+  ]
+}
